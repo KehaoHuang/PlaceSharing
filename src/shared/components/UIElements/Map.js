@@ -10,10 +10,10 @@ const Map = (props) => {
   useEffect(() => {
     const map = new window.google.maps.Map(mapRef.current, {
       center: center,
-      zoom: zoom,
+      zoom: zoom
     });
   
-    new window.google.maps.Marker({ position: props.center, map: map });
+    new window.google.maps.Marker({ position: center, map: map });
   }, [center, zoom]);
 
   return (
